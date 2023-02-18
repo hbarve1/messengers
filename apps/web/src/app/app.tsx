@@ -1,15 +1,23 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
 
-import NxWelcome from './nx-welcome';
+import React from 'react';
+
+import VideoPlayer from './VideoPlayer';
+import Sidebar from './Sidebar';
+import Notifications from './Notifications';
 
 export function App() {
   return (
-    <>
-      <NxWelcome title="web" />
-
-      <div />
-    </>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h1 className={styles.title}>Video Chat</h1>
+      </div>
+      <VideoPlayer />
+      <Sidebar>
+        <Notifications />
+      </Sidebar>
+    </div>
   );
 }
 
